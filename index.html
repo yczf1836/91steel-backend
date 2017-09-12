@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,34 @@
     <link rel="stylesheet" href="lib/css/jquery.dataTables.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div>91steel jquery H-ui</div>
+    <div><input type="text" onblur="verifyText(this.value)"></div>
+    <div><button id="confirm">verify</button></div>
 
     <script src="lib/js/jquery-1.12.4.js"></script>
     <script src="lib/js/H-ui.js"></script>
     <script src="lib/js/jquery.dataTables.js"></script>
+
+    <script src="src/utilities/business-exception.js"></script>
+    <script src="src/utilities/common.js"></script>
+    <script src="src/utilities/regular-expression.js"></script>
+
+    <script>
+        function verifyText(str) {
+            // var reg = new SteelReg();
+            // var a = -3.0890;
+            // var result = reg.parseNumber(str);
+            // // var result = reg.parseNumber(a);
+            // console.log(result);
+            var common = new SteelCommon();
+            var b = true;
+            var result = common.roundFloat(b,3);
+            console.log(result);
+        }
+    </script>
+
 </body>
+
 </html>
